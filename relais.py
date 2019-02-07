@@ -4,7 +4,7 @@ DATE : 2018-2019
 PROJECT : Bio-Urée
 """
 
-from RPi.GPIO import GPIO
+import RPi.GPIO as GPIO
 
 
 class Relais:

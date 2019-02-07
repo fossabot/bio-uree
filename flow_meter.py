@@ -6,7 +6,7 @@ PROJECT : Bio-Urée
 
 import time
 
-from RPi.GPIO import GPIO
+import RPi.GPIO as GPIO
 
 
 class Flowmeter:

@@ -1,13 +1,13 @@
-'''LEVEL SENSOR MODULE
+"""LEVEL SENSOR MODULE
 AUTEUR : Luoskate [UPSILON]
 DATE : 2018-2019
 PROJECT : Bio-Urée
-'''
+"""
 
-from RPi.GPIO import GPIO
+import RPi.GPIO as GPIO
 
-class lv_sensor():
 
+class lv_sensor:
     def __init__(self, pin, callback):
         self.pin = pin
         GPIO.setmode(GPIO.BOARD)
