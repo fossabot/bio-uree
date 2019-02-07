@@ -27,7 +27,7 @@ class Flowmeter:
 
     def measure(self, cst):
         GPIO.add_event_detect(
-            self.pin, GPIO.FALLING, callback=self.pulse_count(), bouncetime=10
+            self.pin, GPIO.FALLING, callback=self.pulse_count(self.pin), bouncetime=10
         )
         self.check(1)
         liters = self.pulse * cst
