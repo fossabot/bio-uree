@@ -1,0 +1,23 @@
+"""RELAIS MODULE
+AUTEUR : Luoskate [UPSILON]
+DATE : 2018-2019
+PROJECT : Bio-Urée
+"""
+
+import RPi.GPIO as GPIO
+
+
+class Relais:
+    def __init__(self, pin):
+        self.pin = pin
+        GPIO.setmode(GPIO.BCM)
+        GPIO.setup(pin, GPIO.OUT, initial=GPIO.LOW)
+
+    def activate(self):
+        GPIO.output(self.pin, GPIO.HIGH)
+
+    def desactivate(self):
+        GPIO.output(self.pin, GPIO.LOW)
+
+    def clean(self):
+        GPIO.cleanup()
